@@ -383,26 +383,20 @@ Create a response to an Interaction from the gateway. Body is an [interaction re
 
 This endpoint also supports file attachments similar to the webhook endpoints. Refer to [Uploading Files](#DOCS_REFERENCE/uploading-files) for details on uploading files and `multipart/form-data` requests.
 
+> info
+> The message created or updated by this initial Interaction response will be referenced as original message or `@original` in request paths of the following endpoints.
+
 ## Get Original Interaction Response % GET /webhooks/{application.id#DOCS_RESOURCES_APPLICATION/application-object}/{interaction.token#DOCS_INTERACTIONS_RECEIVING_AND_RESPONDING/interaction-object}/messages/@original
 
 Returns the initial Interaction response. Functions the same as [Get Webhook Message](#DOCS_RESOURCES_WEBHOOK/get-webhook-message).
-
-> info
-> The original message is the message created or updated by the initial [interaction response](#DOCS_INTERACTIONS_RECEIVING_AND_RESPONDING/create-interaction-response).
 
 ## Edit Original Interaction Response % PATCH /webhooks/{application.id#DOCS_RESOURCES_APPLICATION/application-object}/{interaction.token#DOCS_INTERACTIONS_RECEIVING_AND_RESPONDING/interaction-object}/messages/@original
 
 Edits the initial Interaction response. Functions the same as [Edit Webhook Message](#DOCS_RESOURCES_WEBHOOK/edit-webhook-message).
 
-> info
-> The original message is the message created or updated by the initial [interaction response](#DOCS_INTERACTIONS_RECEIVING_AND_RESPONDING/create-interaction-response).
-
 ## Delete Original Interaction Response % DELETE /webhooks/{application.id#DOCS_RESOURCES_APPLICATION/application-object}/{interaction.token#DOCS_INTERACTIONS_RECEIVING_AND_RESPONDING/interaction-object}/messages/@original
 
 Deletes the initial Interaction response. Returns `204 No Content` on success.
-
-> info
-> The original message is the message created or updated by the initial [interaction response](#DOCS_INTERACTIONS_RECEIVING_AND_RESPONDING/create-interaction-response).
 
 ## Create Followup Message % POST /webhooks/{application.id#DOCS_RESOURCES_APPLICATION/application-object}/{interaction.token#DOCS_INTERACTIONS_RECEIVING_AND_RESPONDING/interaction-object}
 
